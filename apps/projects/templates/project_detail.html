@@ -2,6 +2,13 @@
 {% load static %}
 
 {% block page_content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{ project.title }}</title>
+</head>
 
 <div class="container">
     <h1> {{ project.title }} </h1>
@@ -19,4 +26,5 @@
     </div>
 </div>
 
+</html>
 {% endblock %}

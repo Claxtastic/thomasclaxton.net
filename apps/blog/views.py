@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from blog.models import Post, Comment
-from blog.forms import CommentForm
+from apps.blog.models import Post, Comment
+from apps.blog.forms import CommentForm
 # from .forms import CommentForm
 
 # blog mini view, ordered by most recent

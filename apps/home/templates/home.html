@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Thomas Claxton's Site</title>
+</head>
+
+<img class="img-fluid" src="{% static 'img/bg2.png' %}" aria-label="background" />
+<div class="carousel-caption">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <h1 style="font-size: 60px"><b>Welcome</b></h1>
+        </div>
+        <div class="row justify-content-md-center" style="margin-bottom: 48vh;">
+            <h4>My name is Thomas Claxton and I am a Chicago-based Software Developer.</h4>
+        </div>
+    </div>
+    <a href="https://www.linkedin.com/in/thomas-claxton1/" style="text-decoration: none;">
+        <img class="img-fluid" src="{% static 'img/linkedin.png' %}" style="width: 5%; padding: 10px;" aria-label="LinkedIn" />
+    </a>
+    <a href="https://www.github.com/claxtastic" style="text-decoration: none;">
+        <img class="img-fluid" src="{% static 'img/github.png' %}" style="width: 5%; padding: 10px;" aria-label="GitHub" />
+    </a>
+</div>
+
+</html>
+{% endblock %}

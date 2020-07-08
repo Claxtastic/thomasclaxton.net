@@ -1,14 +1,22 @@
 {% extends "base.html" %}
 
 {% block page_content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Thomas Claxton's Blog</title>
+</head>
+
 <div class="container">
     <div class="col-md-8 offset-md-2">
-        <h1>{{ category | title }}</h1>
+        <h1>Blog</h1>
         <hr>
         {% for post in posts %}
         <h2><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h2>
         <small>
-            {{ post.created_on.date }}
+            {{ post.created_on.date }} |&nbsp;
             Categories:&nbsp;
             {% for category in post.categories.all %}
             <a href="{% url 'blog_category' category.name %}">
@@ -20,4 +28,6 @@
         {% endfor %}
     </div>
 </div>
+
+</html>
 {% endblock %}
