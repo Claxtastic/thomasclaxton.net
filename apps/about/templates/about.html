@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="About page for Software Developer Thomas Claxton">
+        <title>About Me - Thomas Claxton</title>
+    </head>
+
+    <header>
+        
+    </header>
+
+    <body>
+        <div class="jumbotron bg-dark">
+            <div class="row justify-content-center">
+                <div style="text-align: center;">
+                    <picture>
+                        <img src="{% static 'img/pfp.jpg' %}" class="rounded-circle"  style="width: 50%;" alt="Photo of me" aria-label="Photo of me">
+                    </picture>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <h1 class="display-4">Thomas Claxton</h1>
+            </div>
+            <div class="row justify-content-center">
+                <p class="lead">Software Developer</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h4>About Me</h4>
+                        </div>
+                        <p class="card-text">
+                            My name is Thomas Claxton a recent graduate from DePaul University in Computer Science with honors. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h4>Skills</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h4>Contact Me</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}
