@@ -4,6 +4,22 @@
 {% block page_content %}
 <!DOCTYPE html>
 
+<style>
+    .list-group-item {
+        background-color: #37474f;
+        color: #ffffff;
+    }
+
+    a {
+        color: #ffffff;
+    }
+
+    a:hover {
+        color: #ce93d8;
+        text-decoration: none;
+    }
+</style>
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -16,49 +32,115 @@
     </header>
 
     <body>
-        <div class="jumbotron bg-dark">
-            <div class="row justify-content-center">
-                <div style="text-align: center;">
-                    <picture>
-                        <img src="{% static 'img/pfp.jpg' %}" class="rounded-circle"  style="width: 50%;" alt="Photo of me" aria-label="Photo of me">
-                    </picture>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="jumbotron bg-dark">
+                    <div class="row justify-content-center">
+                        <div style="text-align: center;">
+                            <picture>
+                                <img src="{% static 'img/pfp.jpg' %}" class="rounded-circle"  style="width: 60%;" alt="Photo of me" aria-label="Photo of me">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <h1 class="display-4">Thomas Claxton</h1>
+                    </div>
+                    <div class="row justify-content-center">
+                        <p class="lead">Software Developer</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <h1 class="display-4">Thomas Claxton</h1>
-            </div>
-            <div class="row justify-content-center">
-                <p class="lead">Software Developer</p>
             </div>
         </div>
 
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="card bg-dark text-white">
+                    <div class="card-header">
+                        <h4>About Me</h4>
+                    </div>
                     <div class="card-body">
-                        <div class="card-title">
-                            <h4>About Me</h4>
-                        </div>
                         <p class="card-text">
-                            My name is Thomas Claxton a recent graduate from DePaul University in Computer Science with honors. 
+                            My name is Thomas Claxton and I am a recent graduate from DePaul University in 
+                            Computer Science with honors. As of writing I am looking for full-time opportunities
+                            in software development, from full-stack, to front-end, or higher-level backend work.
+                            <br> <br>
+                            Over the last 4 years, both in and outside the classroom, I've learned the fundamentals of computer science
+                            and algorithms, the skills to make Android apps, web apps, REST APIs, and other software development skills.
+                            While I was in school, I held various student worker positions, including 2 end-user IT support roles,
+                            a research assistant position in the computer science department, and a TA/tutor for CSC 300.
+                            <br> <br>
+                            On the rest of the site you'll find my projects, miscellaneous writings, and how to get in contact with me.
+                            If you know of any opportunities based in Chicago that might fit my skills, reach out to me via email!
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <div class="card bg-dark text-white">
+                    <div class="card-header">
+                        <h4>Skills</h4>
+                    </div>
                     <div class="card-body">
-                        <div class="card-title">
-                            <h4>Skills</h4>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card-title">
+                                    <h6>Languages</h6>
+                                </div>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Java</li>
+                                        <li>JavaScript</li>
+                                        <li>TypeScript</li>
+                                        <li>Python</li>
+                                        <li>C#</li>
+                                        <li>HTML, CSS</li>
+                                        <li>SQL</li>
+                                        <li>C++</li>
+                                        <li>Kotlin</li>
+                                    </ul>    
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-title">
+                                    <h6>Frameworks/Libraries</h6>
+                                </div>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Android SDK</li>
+                                        <li>Angular</li>
+                                        <li>Spring</li>
+                                        <li>React.js</li>
+                                        <li>Django</li>
+                                    </ul>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="card bg-dark text-white">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h4>Contact Me</h4>
+                    <div class="card-header">
+                        <h4>Links</h4>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item">
+                            <span class="pull-left">
+                                <img class="img-fluid" style="max-width: 30px; margin-bottom: 1vh;" src="{% static 'img/github.png' %}">
+                            </span>
+                            <a class="lead" style="padding-left: 2px;" href="https://www.github.com/claxtastic">GitHub</a>
+                        </div>
+                        <div class="list-group-item">
+                            <span class="pull-left">
+                                <img class="img-fluid" style="max-width: 30px; margin-bottom: 1vh;" src="{% static 'img/linkedin.png' %}">
+                            </span>
+                            <a class="lead" style="padding-left: 2px;" href="https://www.linkedin.com/in/thomas-claxton-1">LinkedIn</a>
+                        </div>
+                        <div class="list-group-item">
+                            <span class="pull-left">
+                                <img class="img-fluid" style="max-width: 30px; margin-bottom: 1vh;" src="{% static 'img/mail.png' %}">
+                            </span>
+                            <a class="lead" style="padding-left: 2px;" href="mailto:claxtons4@gmail.com">Email</a>
                         </div>
                     </div>
                 </div>
