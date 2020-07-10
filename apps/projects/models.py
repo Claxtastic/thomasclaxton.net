@@ -7,6 +7,7 @@ class Project(models.Model):
     description = models.TextField()
     technology = models.CharField(max_length=20)
     image = models.ImageField(upload_to='img')
+    repo = models.TextField(default='')
 
     def __str__(self):
         return f"Project({self.title}, {self.description}, {self.technology}, {self.image})"

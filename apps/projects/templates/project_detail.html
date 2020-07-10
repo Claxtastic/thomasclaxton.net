@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
 
+<style>
+    a {
+        color: #ffffff;
+    }
+
+    a:hover {
+        color: #ce93d8;
+        text-decoration: none;
+    }
+</style>
+
 {% block page_content %}
 <!DOCTYPE html>
 <html lang="en">
@@ -18,20 +29,30 @@
 
         <div class="card-body">
             <div class="row">
-                <div class="col-md-6">
-                    <img src="{{ project.image.url }}" alt="Project Image" width="50%">
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <img src="{{ project.image.url }}" alt="Project Image" style="max-width: 400px;">
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <h5>Description:</h5>
                     <p> {{ project.description }} </p>
                     <br>
                     <h5>Technology:</h5>
                     <p> {{ project.technology }} </p>
-                    <h5>Repo: </h5>
-                    <!-- <p> {{ project.repo }} </p> -->
                 </div>
             </div>
         </div>
+
+        {% if project.repo != '' %}
+            <div class="card-footer">
+                <div class="repo-container" style="text-align: center;">
+                    <a href="{{ project.repo }}">
+                        <div class="lead">
+                            Find the project on GitHub <img class="img-fluid" src="{% static 'img/github.png' %}" style="max-width: 20px;">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
     </div>
 </div>
 
