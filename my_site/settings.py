@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'django-env.eba-pmeag5dk.us-west-2.elasticbeanstalk.com',
     '127.0.0.1',
+    'thomasclaxton.net',
 ]
 
 # Application definition
